@@ -41,38 +41,55 @@ export default defineConfig({
       }
     }),
     svg(),
-    VitePWA({
-      registerType: 'autoUpdate',
-      includeAssets: [
-        'favicon.svg',
-        'robots.txt',
-        'apple-touch-icon.png',
-        'assets/manifest/android-chrome-192x192.png',
-        'assets/manifest/android-chrome-512x512.png'
-      ],
-      manifest: {
-        name: 'Vue Todo App',
-        short_name: 'TodoApp',
-        description: 'A simple offline-capable Todo App',
-        theme_color: '#4F46E5',
-        background_color: '#FFFFFF',
-        display: 'standalone',
-        scope: '/Vue-app/',
-        start_url: '/Vue-app/',
-        icons: [
-          {
-            src: 'assets/manifest/android-chrome-192x192.png',
-            sizes: '192x192',
-            type: 'image/png'
-          },
-          {
-            src: 'assets/manifest/android-chrome-512x512.png',
-            sizes: '512x512',
-            type: 'image/png'
+  VitePWA({
+    registerType: 'autoUpdate',
+    includeAssets: [
+      'favicon.svg',
+      'robots.txt',
+      'apple-touch-icon.png',
+      'assets/manifest/android-chrome-192x192.png',
+      'assets/manifest/android-chrome-512x512.png'
+    ],
+    manifest: {
+      name: 'Vue Todo App',
+      short_name: 'TodoApp',
+      description: 'A simple offline-capable Todo App',
+      theme_color: '#4F46E5',
+      background_color: '#FFFFFF',
+      display: 'standalone',
+      scope: '/Vue-app/',
+      start_url: '/Vue-app/',
+      icons: [
+        {
+          src: 'assets/manifest/android-chrome-192x192.png',
+          sizes: '192x192',
+          type: 'image/png'
+        },
+        {
+          src: 'assets/manifest/android-chrome-512x512.png',
+          sizes: '512x512',
+          type: 'image/png'
+        }
+      ]
+    },
+    workbox: {
+      globPatterns: ['**/*.{js,css,html,png,svg,json}'], // cache all JS, CSS, HTML, images, JSON
+      navigateFallback: '/Vue-app/index.html', // important for SPA routing
+      runtimeCaching: [
+        {
+          urlPattern: /^https:\/\/sk5388654\.github\.io\/Vue-app\//,
+          handler: 'NetworkFirst',
+          options: {
+            cacheName: 'vue-app-cache',
+            expiration: {
+              maxEntries: 100,
+              maxAgeSeconds: 60 * 60 * 24 * 30 // 30 days
+            }
           }
-        ]
-      }
-    })
+        }
+      ]
+    }
+  })
   ],
   resolve: {
     alias: {
