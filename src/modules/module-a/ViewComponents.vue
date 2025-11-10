@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import type { ColorField } from '@capitec/omni-components/color-field';
 import type { Select } from '@capitec/omni-components/select';
 
@@ -31,9 +31,9 @@ function colourChange(e: Event) {
 function sizeChange(e: Event) {
     state.size = ((e.target as Select)?.value?.toString() as IconSize) ?? 'default'
 }
-</script>
+</script> -->
 
-<template>
+<!-- <template>
     <div class="content-area">
         <div style="padding: 20px 20px 0 20px;">
             <InfoBlock>
@@ -60,19 +60,19 @@ function sizeChange(e: Event) {
         <div class="preview" :style="`color: ${state.color}`">
             <!-- Omni Icon with slotted SVG content -->
             <!-- eslint-disable-next-line vue/no-v-text-v-html-on-component -->
-            <omni-icon v-html="factories" .size="state.size"> </omni-icon>
+            <!-- <omni-icon v-html="factories" .size="state.size"> </omni-icon> -->
 
             <!-- Omni Icon with Google Material Icon -->
-            <omni-icon .size="state.size" icon="@material/dataset"></omni-icon>
-        </div>
-        <div class="controls">
-            <omni-color-field label="Colour" .value="state.color" @input="(e: Event) => colourChange(e)"> </omni-color-field>
+            <!-- <omni-icon .size="state.size" icon="@material/dataset"></omni-icon> -->
+        <!-- </div> -->
+        <!-- <div class="controls"> -->
+            <!-- <omni-color-field label="Colour" .value="state.color" @input="(e: Event) => colourChange(e)"> </omni-color-field>
             <omni-select label="Size" :value.prop="state.size" .items="iconSizes" @change="(e: Event) => sizeChange(e)"></omni-select>
-        </div>
-    </div>
-</template>
+        </div> -->
+    <!-- </div> -->
+<!-- </template> --> -->
 
-<style scoped>
+<!-- <style scoped>
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 
 .preview {
@@ -98,4 +98,9 @@ function sizeChange(e: Event) {
     padding: 10px;
     max-width: 170px;
 }
-</style>
+</style> -->
+
+
+<template>
+    <h1>hello ccomponent page</h1>
+</template>

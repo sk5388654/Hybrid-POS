@@ -44,10 +44,10 @@ onMounted(() => {
 </script>
 
 <template>
-    <header @click="navigate($event, '/')">
+    <!-- <header @click="navigate($event, '/')">
         <img src="./assets/logo.png" alt="Omni Logo" />
         <omni-label>Omni + Vue</omni-label>
-    </header>
+    </header> -->
     <div class="navbar">
         <nav>
             <omni-hyperlink href="/" @click="(e: MouseEvent) => navigate(e, '/')">Home</omni-hyperlink>
@@ -119,7 +119,6 @@ header>omni-label {
     display: flex;
     justify-content: space-between;
     background: #209dee;
-    align-items: center;
 }
 
 .navbar>omni-switch {

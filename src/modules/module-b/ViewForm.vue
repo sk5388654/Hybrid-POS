@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import type { Check } from '@capitec/omni-components/check';
 import type { EmailField } from '@capitec/omni-components/email-field';
 import type { PinField } from '@capitec/omni-components/pin-field';
@@ -69,9 +69,9 @@ function formSubmitted() {
         }
     }
 }
-</script>
+</script> -->
 
-<template>
+<!-- <template>
     <div class="content-area">
         <div style="padding: 20px 20px 0 20px;">
             <InfoBlock>
@@ -86,13 +86,13 @@ function formSubmitted() {
                         <omni-label label="Info" type="title"></omni-label>
                         <span> This example illustrates the use of various components to produce a basic form. </span>
                     </div>
-                </div>
-            </InfoBlock>
+                </div> -->
+            <!-- </InfoBlock>
         </div>
         <div class="preview">
             <div class="form-container">
-                <omni-label label="Input Examples" type="title"></omni-label>
-                <omni-email-field
+                <omni-label label="Input Examples" type="title"></omni-label> -->
+                <!-- <omni-email-field
                     ref="emailFieldRef"
                     id="form-email-field"
                     label="Email"
@@ -100,38 +100,38 @@ function formSubmitted() {
                     .value="state.emailValue"
                     @input="(e: InputEvent) => emailFieldInput(e)">
                     <!-- eslint-disable-next-line vue/no-deprecated-slot-attribute -->
-                    <omni-icon size="medium" slot="suffix" class="suffix-slot">
+                    <!-- <omni-icon size="medium" slot="suffix" class="suffix-slot">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100%" height="100%">
                             <path
-                                d="M22 3.25a.75.75 0 0 1 .75.75v16a.75.75 0 0 1-.75.75H2a.75.75 0 0 1-.75-.75V4A.75.75 0 0 1 2 3.25Zm-.75 3.19-8.82 6.174a.75.75 0 0 1-.76.06l-.1-.06-8.82-6.173V19.25h18.5V6.44Zm-.202-1.69H2.951L12 11.084l9.048-6.334Z" />
-                        </svg>
-                    </omni-icon>
-                </omni-email-field>
-                <omni-pin-field
+                                d="M22 3.25a.75.75 0 0 1 .75.75v16a.75.75 0 0 1-.75.75H2a.75.75 0 0 1-.75-.75V4A.75.75 0 0 1 2 3.25Zm-.75 3.19-8.82 6.174a.75.75 0 0 1-.76.06l-.1-.06-8.82-6.173V19.25h18.5V6.44Zm-.202-1.69H2.951L12 11.084l9.048-6.334Z" /> -->
+                        <!-- </svg>
+                    </omni-icon> -->
+                <!-- </omni-email-field> --> -->
+                <!-- <omni-pin-field
                     ref="pinFieldRef"
                     id="form-pin-field"
                     label="Pin"
                     hint="Your pin"
                     .value="state.pinValue"
                     @input="(e: InputEvent) => pinFieldInput(e)">
-                </omni-pin-field>
-                <omni-radio-group class="radio-group" label="Account Type" :horizontal="true">
+                </omni-pin-field> -->
+                <!-- <omni-radio-group class="radio-group" label="Account Type" :horizontal="true">
                     <omni-radio label="Developer"></omni-radio>
                     <omni-radio label="Admin"></omni-radio>
-                    <omni-radio label="Casual User" :checked="true"></omni-radio>
-                </omni-radio-group>
-                <omni-check
+                    <omni-radio label="Casual User" :checked="true"></omni-radio> -->
+                <!-- </omni-radio-group> -->
+                <!-- <omni-check
                     ref="checkRef"
                     id="form-check"
                     label="I agree all fields above are populated"
                     @click="(e: Event) => checkClicked(e)"></omni-check>
-                <omni-button label="Submit" type="primary" @click="() => formSubmitted()"></omni-button>
-            </div>
+                <omni-button label="Submit" type="primary" @click="() => formSubmitted()"></omni-button> -->
+            <!-- </div>
         </div>
     </div>
-</template>
+</template> -->
 
-<style scoped>
+<!-- <style scoped>
 
 .preview {
     min-height: 360px;
@@ -169,4 +169,11 @@ function formSubmitted() {
     margin-right: 10px;
     color: var(--omni-theme-primary-color);
 }
-</style>
+</style> -->
+
+
+<template>
+    <h1>
+        hello form page 
+    </h1>
+</template>
