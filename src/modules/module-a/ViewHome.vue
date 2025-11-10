@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center p-4">
     <div class="bg-white shadow-2xl rounded-2xl p-6 w-full max-w-md">
       <h1 class="text-3xl font-semibold text-center text-indigo-600 mb-6">
-         Todo App
+        Todo App
       </h1>
 
       <!-- Input Field -->
@@ -75,10 +75,27 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, watch, onMounted } from "vue";
 
 const newTodo = ref("");
 const todos = ref([]);
+
+// Load todos from localStorage when app starts
+onMounted(() => {
+  const storedTodos = localStorage.getItem("todos");
+  if (storedTodos) {
+    todos.value = JSON.parse(storedTodos);
+  }
+});
+
+// Watch todos and save changes to localStorage
+watch(
+  todos,
+  (newTodos) => {
+    localStorage.setItem("todos", JSON.stringify(newTodos));
+  },
+  { deep: true } // Watch nested properties like completed/editing
+);
 
 function addTodo() {
   const text = newTodo.value.trim();
@@ -99,7 +116,6 @@ function editTodo(index) {
 function stopEditing(todo) {
   todo.editing = false;
 }
-
 </script>
 
 <style scoped>

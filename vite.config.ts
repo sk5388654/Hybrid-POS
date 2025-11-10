@@ -1,14 +1,13 @@
 import { fileURLToPath, URL } from 'node:url'
-
 import path from 'path'
-
 import vue from '@vitejs/plugin-vue'
-import copy from 'rollup-plugin-copy';
+import copy from 'rollup-plugin-copy'
 import { defineConfig } from 'vite'
 import svg from 'vite-plugin-svgo'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/Vue-app/', // <--- add this for GitHub Pages deployment
   build: {
     rollupOptions: {
       output: {
