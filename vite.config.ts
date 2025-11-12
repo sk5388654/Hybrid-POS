@@ -3,7 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/Hybrid-POS/', // repo name with trailing slash
+  base: '/Hybrid-POS/', // <-- GitHub repo name
   plugins: [vue()],
   resolve: {
     alias: {
