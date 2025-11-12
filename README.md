@@ -70,3 +70,4 @@ npm run test -- --debug
 
 # POS
 # POS-Hybrid
+# Hybrid-POS
